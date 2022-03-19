@@ -16,7 +16,6 @@ use url::Url;
 
 type Result<T> = std::result::Result<T, Box<dyn Error>>;
 
-// create constat strings
 const IPV4_HEADER_LEN: usize = 20;
 const ICMP_HEADER_LEN: usize = 8;
 const ICMP_DATA_LEN: usize = 8;
