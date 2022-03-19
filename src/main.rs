@@ -47,12 +47,12 @@ fn main() -> Result<()> {
         if let Ok((_, addr)) = recv.next() {
             //  if the host hit is a repeat, we have a loop, destination reached,
             if Some(addr) == prev_hop_addr {
-                println!("Reached address: {}", addr.to_string());
+                println!("Reached address: {}", addr);
                 return Ok(());
             }
 
             prev_hop_addr = Some(addr);
-            println!("TTL: {} - {}", ttl, addr.to_string());
+            println!("TTL: {} - {}", ttl, addr);
         }
     }
     Ok(())
